@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let wordArray=['red','blue','green','yellow']
+        function findIndex(array,word){
+            let index=-1
+         for(let i=0;i<array.length;i++){
+            if (word===array[i]){
+                index=i;
+                console.log(i);
+                break;
+            }
+         }
+         if (index===-1){
+            console.log(index);
+         }
+        }
+        findIndex(wordArray,'green')
+    </script>
+</body>
+</html>

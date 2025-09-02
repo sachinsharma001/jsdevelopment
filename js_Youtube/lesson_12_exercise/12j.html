@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mult = (a, b) => a * b;
+        console.log(mult(2, 3), mult(7, 10))
+        // 12l----------------------------------------------------
+        
+        function countPositive(aray) {
+            let count = 0
+            aray.forEach(value => {
+                if (value > 0) {
+                    count++;
+                }
+            })
+            console.log(count)
+        }
+        countPositive([1,0,-1])
+        // 12m------------------------------------------------------
+        
+function addNum(array,num){
+    let result = array.map(value =>value+num )
+    console.log(result)
+}
+addNum([1,2,3,4,5,6,7,8,9,10],3)
+//12n--------------------------------------------------------------------
+function removeArray(array){
+
+return array.filter(value =>value !=='egg')
+}
+console.log(removeArray(['egg','pef','peg','egg','leg'])
+)</script>
+</body>
+</html>

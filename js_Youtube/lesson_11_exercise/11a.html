@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // <------------------11a------------------>
+        const num =[2,22,12,23];
+        num[3]=99;
+        console.log(num)
+        // <------------------11b------------------>
+        const initialArray=[1,2,3,4,5]
+        function lastElement(arra){
+        let lastvalue=arra[arra.length-1]
+        console.log(lastvalue)
+        }
+        lastElement(initialArray)
+        // <------------------11c------------------>
+        function arraySwap(aray){
+           const firstValue= aray[0];
+           const lastValue= aray[aray.length-1];
+           aray[0]=lastValue;
+           aray[aray.length-1]=firstValue;
+           console.log(aray)
+        }
+        arraySwap(num)
+        // <------------------11d------------------>
+        for(let i=0;i<num.length;i++){
+            num[i]*=2;
+        }
+        console.log(num)
+        const numb=[1,2,3,4,5,-1]
+      function countPositive(arry){
+        let cont=0;
+        for(let i=0;i<arry.length;i++){
+            if (arry[i]>0){
+                cont++;
+            }
+        }
+        return cont;
+      }
+      let finalArray=[]
+      console.log(countPositive(numb))
+      function addArray(array1,array2){
+       console.log(`1 array =${array1}`)
+       console.log(`1 array =${array2}`)
+       for(i=0;i<array1.length;i++){
+       finalArray[i]=array1[i]+ array2[i]
+    }}
+    addArray(num,numb);
+    console.log(finalArray)
+      
+
+    </script>
+</body>
+</html>

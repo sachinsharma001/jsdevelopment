@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <button  class="change" onclick="
+   update();
+    "> Start</button>
+    <button class="threesome" onclick=" const but1= document.querySelector('.threesome') 
+    but1.innerHTML='Loading'; 
+    setTimeout(function(){
+        but1.innerHTML='Finished'
+    },1000)">Start</button>
+    <button class="added">add to cart</button>
+ <p class="newEl"></p>
+ <button class="adiongo">Add</button>
+ <button class="mins">Remove</button>
+</head>
+<body>
+    <script>
+        
+        let add= function(){
+            console.log(2+3)
+        }
+        add()
+        setTimeout(add(),1000)
+document.querySelector('.added').addEventListener('click',()=>adding())
+document.querySelector('.adiongo').addEventListener('click',()=>message++)
+document.querySelector('.mins').addEventListener('click',()=>(message>=0 ? message-- :''))
+        <!-------------------------------------------------------------------->
+        function runTwice(value){
+            value()
+            value()
+        }
+        runTwice(function(){
+          console.log('12b'); 
+        })
+        runTwice(add)
+        function update(){
+        const butt= document.querySelector('.change')
+            setTimeout(function(){
+                butt.innerHTML = 'Finished!';
+            },1000)
+    } let timeoutId;
+
+    function adding(){
+        let hhtml= document.querySelector('.newEl')
+        hhtml.innerHTML='Added';
+        // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+        clearTimeout(timeoutId);
+         timeoutId= setTimeout(function(){hhtml.innerHTML=''},2000
+         )
+    }
+    let message=2;
+     setInterval(/*function*/()=> {//arrow function
+        if (message<=0){
+            document.title = 'App';
+        }
+        else if (document.title === 'App') {
+          document.title = `(${message}) New messages`;
+        } 
+        else {
+          document.title = 'App';
+        }},1000)
+
+
+    </script>
+</body>
+</html>

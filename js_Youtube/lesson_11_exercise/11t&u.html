@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const foodItems = ['egg', 'apple', 'banana', 'egg', 'egg', 'chicken']
+        removeEgg(foodItems)
+        function removeEgg(array) {
+            const newFood= array.slice().reverse()//[...array.reverse()]//to copy array
+            const result = []
+            let count = 0
+            for (let i = 0; i < newFood.length; i++) {
+                if (newFood[i] === 'egg'&&count <2) {
+                
+                     count++;
+                    continue;
+                }
+                    result.push(newFood[i]);
+            }
+            console.log(result.reverse())
+            console.log(foodItems)
+        
+        }
+    </script>
+</body>
+</html>

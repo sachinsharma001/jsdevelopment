@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button1111">9a</button>
+    <button class="js-button1" >9b</button> <br><br> 
+
+        <button onclick="  diplayChoice('Heads')">Heads</button>
+        <button onclick="  diplayChoice('Tails')">Tails</button>
+        <br><br>
+        <input class="js-txtbox-9d" placeholder="Name" onkeydown=" if (event.key==='Enter'){
+            displayName();// 9e=onkeydown= if (event.key==='Enter'){displayName();}
+        }">
+        <button onclick=" displayName();">Submit</button>
+        <p class="js-para"></p>
+    <script>
+        console.log(document.querySelector('.button1111').innerHTML)
+ 
+//  ----------------------- 9a-------------------------------------
+ 
+document.querySelector('.js-button1').innerHTML='9b done!';
+
+ //  -----------------------9b------------------------------------
+
+ function diplayChoice(choice){
+document.querySelector('p').innerHTML=`you chose :${choice}`
+ }
+
+  //  -----------------------9c------------------------------------
+function displayName(){
+ const name=(document.querySelector('.js-txtbox-9d').value);
+ document.querySelector('.js-para').innerHTML=`your name is: ${name}`
+}
+
+ //  -----------------------9d,9e and 9f------------------------------------
+
+
+    </script>
+</body>
+</html>
