@@ -1,4 +1,4 @@
-let productsHTML='';
+ let productsHTML='';
 products.forEach((products)=>{
     productsHTML+= `<div class="product-container">
           <div class="product-image-container">
