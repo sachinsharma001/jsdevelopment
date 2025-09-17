@@ -3,7 +3,7 @@ import { products, getProduct} from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
 import { deliveryOptions, getDeliveryOptions } from '../../data/deliveryOptions.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-
+import { rerenderPaymentSummary } from './paymentSummary.js';
 
 
 export function rerenderOrderSummary()
@@ -121,9 +121,11 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
   link.addEventListener('click', () => {
     const productId = link.dataset.productId;
     removeFromCart(productId);
+
     const container = document.querySelector(`.js-cart-item-container-${productId}`)
     container.remove();
     updateCartQuantity();
+    rerenderPaymentSummary();
   });
 });
 
@@ -140,7 +142,6 @@ document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
       `.js-cart-item-container-${productId}`
     );
     container.classList.add('is-editing-quantity');
-
   });
 });
 
@@ -167,6 +168,7 @@ document.querySelectorAll('.js-save-link')
       );
       quantityLabel.innerHTML = newQuantity;
       updateCartQuantity();
+      rerenderPaymentSummary();
     });
   });
 
@@ -175,6 +177,7 @@ document.querySelectorAll('.js-save-link')
       const {productId, deliveryOptionId}=element.dataset;
       updateDeliveryOption(productId,deliveryOptionId);
       rerenderOrderSummary();
+      rerenderPaymentSummary();
     })
   });
 }
