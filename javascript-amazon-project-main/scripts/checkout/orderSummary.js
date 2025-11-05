@@ -182,4 +182,3 @@ document.querySelectorAll('.js-save-link')
     })
   });
 }
-rerenderOrderSummary();
